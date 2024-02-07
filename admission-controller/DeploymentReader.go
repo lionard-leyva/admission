@@ -7,6 +7,12 @@ import (
 	appsv1 "k8s.io/api/apps/v1"
 )
 
+/**
+* DeploymentReader struct
+* Esta estructura define el método Read que recibe un objeto de tipo v1.AdmissionRequest
+* y retorna un objeto de tipo appsv1.Deployment y un error
+* Este método se encarga de leer el objeto de la solicitud de admisión y deserializarlo en un struct de go
+ */
 type DeploymentReader struct{}
 
 func (dr *DeploymentReader) Read(req v1.AdmissionRequest) (*appsv1.Deployment, error) {

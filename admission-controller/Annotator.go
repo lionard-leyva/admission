@@ -8,9 +8,9 @@ type Annotator interface {
 	Annotate(deployment **appsv1.Deployment) error
 }
 
-type PodAnnotatorx struct{}
+type PodAnnotator struct{}
 
-func (pa *PodAnnotatorx) Annotate(deployment *appsv1.Deployment) error {
+func (pa *PodAnnotator) Annotate(deployment *appsv1.Deployment) error {
 	if deployment.Annotations == nil {
 		deployment.Annotations = make(map[string]string)
 	}
